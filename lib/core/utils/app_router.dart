@@ -1,9 +1,9 @@
 import 'package:go_router/go_router.dart';
-import 'package:jak/features/Home/presentation/views/onboarding_view.dart';
+import 'package:jak/features/Onboarding/presentation/views/onboarding_view.dart';
 import 'package:jak/features/Splash/presentation/views/splash_view.dart';
 
 abstract class AppRouter {
-  static const kHomeView = '/homeView';
+  static const kOnboardingView = '/homeView';
 
   static final router = GoRouter(
     routes: [
@@ -12,7 +12,7 @@ abstract class AppRouter {
         builder: (context, state) => const SplashView(),
       ),
       GoRoute(
-        path: kHomeView,
+        path: kOnboardingView,
         builder: (context, state) => const OnBoardingView(),
       ),
     ],

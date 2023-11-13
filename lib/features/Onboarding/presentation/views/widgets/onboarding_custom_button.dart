@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:jak/core/utils/styles.dart';
 
-class OnboardingSendButton extends StatelessWidget {
-  const OnboardingSendButton({super.key});
+class OnboardingCustomButton extends StatelessWidget {
+  const OnboardingCustomButton({super.key, this.text});
+
+  final String? text;
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +19,8 @@ class OnboardingSendButton extends StatelessWidget {
           ),
         ),
         onPressed: () {},
-        child: const Text(
-          'Send',
+        child: Text(
+          text ?? 'Send',
           style: Styles.textStyle18,
         ),
       ),

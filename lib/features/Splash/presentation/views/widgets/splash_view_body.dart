@@ -41,21 +41,21 @@ class _SplashViewBodyState extends State<SplashViewBody>
     );
   }
 
-void navigateToHomeView() {
+  void navigateToHomeView() {
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        GoRouter.of(context).push(AppRouter.kHomeView);
+        GoRouter.of(context).push(AppRouter.kOnboardingView);
       },
     );
   }
 
   void initSlidingAnimation() {
-     animationController = AnimationController(
+    animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 1),
     );
-    
+
     slidingAnimation =
         Tween<Offset>(begin: const Offset(3, 0), end: Offset.zero)
             .animate(animationController);

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:jak/core/utils/styles.dart';
 
@@ -7,11 +6,7 @@ class OnboardingSkipButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
+    return MaterialButton(
       onPressed: () {},
       child: Text(
         'Skip',

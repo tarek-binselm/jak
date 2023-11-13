@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:jak/core/utils/assets.dart';
 import 'package:jak/core/utils/styles.dart';
-import 'package:jak/features/Home/presentation/views/widgets/onboarding_custom_image.dart';
-import 'package:jak/features/Home/presentation/views/widgets/onboarding_send_button.dart';
-import 'package:jak/features/Home/presentation/views/widgets/onboarding_skip_button.dart';
+import 'package:jak/features/Onboarding/presentation/views/widgets/onboarding_custom_button.dart';
+import 'package:jak/features/Onboarding/presentation/views/widgets/onboarding_custom_image.dart';
+import 'package:jak/features/Onboarding/presentation/views/widgets/onboarding_skip_button.dart';
 
-class OnBoardingItem extends StatelessWidget {
-  const OnBoardingItem({super.key});
+class OnBoarding1 extends StatelessWidget {
+  const OnBoarding1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,14 @@ class OnBoardingItem extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          OnboardingCustomImage(),
+          OnboardingCustomImage(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(188.5),
+              topRight: Radius.circular(188.5),
+            ),
+            image: AssetData.kWatch,
+            backgroundColor: Color(0xffFDD9CC),
+          ),
           SizedBox(
             height: 50,
           ),
@@ -34,7 +42,7 @@ class OnBoardingItem extends StatelessWidget {
           SizedBox(
             height: 50,
           ),
-          OnboardingSendButton(),
+          OnboardingCustomButton(),
           OnboardingSkipButton(),
         ],
       ),
